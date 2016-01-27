@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>List of Expenses</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header"><a class="navbar-brand">Expenses</a></div>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="expense">Add</a></li>
+          <li><a href="viewexpenses">View</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+		<div class="col-xs-2 col-sm-0 col-md-4"></div>
+        <div class="col-xs-8 col-sm-4 col-md-4">
+          <form action="" method="post" role="form" class="form">
+            <div style="display: none;">
+              <input id="csrf_token" type="hidden" name="csrf_token" value="1453604401##0b8d2ae3f5c0acd49e6b28cb98995dd7ec53d335">
+            </div>
+            <div class="form-group required">
+              <label for="amt" class="control-label">Amount</label>
+              <input id="amt" 8="" type="text" name="amt" required="" value="" class="form-control">
+            </div>
+            <div class="form-group required">
+              <label for="date" class="control-label">Date</label>
+              <input id="date" type="date" name="date" required="" value="" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="description" class="control-label">Description</label>
+              <input id="description" type="text" name="description" value="" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="comments" class="control-label">Comment</label>
+              <input id="comments" type="text" name="comments" value="" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="category" class="control-label">Category</label>
+              <select id="category" name="category" class="form-control">
+                <option value="HOH">House hold</option>
+                <option value="RAT">Ration</option>
+                <option value="VGF">Veggies &#38; fruits</option>
+                <option value="CC">Child Care</option>
+                <option value="MSC">Misc</option>
+                <option value="MOB">Mobile</option>
+                <option value="BCH">Bank Charges</option>
+                <option value="INT">Internet</option>
+                <option value="TV">Tv</option>
+                <option value="RST">Restaurant</option>
+                <option value="CLT">Clothing</option>
+                <option value="TVL">Travel &#38; Outing</option>
+                <option value="PTL">Petrol</option>
+                <option value="MS">Maid &#38; Servant</option>
+                <option value="CSR">Car Service &#38; Repair</option>
+                <option value="MLK">Milk</option>
+                <option value="PCA">Personal Care</option>
+                <option value="OFF">Official</option>
+                <option value="INC">Income</option>
+              </select>
+            </div>
+            <input id="submit" type="submit" name="submit" value="Submit" class="btn btn-default">
+          </form>
+        </div>
+		<div class="col-xs-2 col-sm-0 col-md-4"></div>
+      </div>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  </body>
+</html>

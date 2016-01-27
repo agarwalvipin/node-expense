@@ -1,0 +1,14 @@
+doctype html
+html
+	head
+		title List of Expenses
+		link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css')
+	body
+		nav(class=['navbar', 'navbar-inverse'])
+			div.container-fluid
+				div.navbar-header
+					a.navbar-brand Expenses
+				ul(class=['nav', 'navbar-nav', 'navbar-right'])
+					li.active: a(href='#') Home
+					li: a(href='expense') Add
+					li: a(href='viewexpenses') View

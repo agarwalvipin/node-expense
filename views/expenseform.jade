@@ -1,0 +1,66 @@
+doctype html
+html
+  head
+    title List of Expenses
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css")
+  body
+    nav.navbar.navbar-inverse
+      .container-fluid
+        .navbar-header
+          a.navbar-brand Expenses
+        ul.nav.navbar-nav.navbar-right
+          li.active
+            a(href="#") Home
+          li
+            a(href="expense") Add
+          li
+            a(href="viewexpenses") View
+    .container
+      .row
+        .col-xs-2.col-sm-0.col-md-4
+        .col-xs-8.col-sm-4.col-md-4
+          //form.form(id = "eform" name ="eform" action="viewexpenses", method="post", role="form")
+          div#formSubmitResponseStatus
+          form.form(action="" onsubmit="return validate()")
+            div(style="display: none;")
+              //input#csrf_token(type="hidden", name="csrf_token", value="1453604401##0b8d2ae3f5c0acd49e6b28cb98995dd7ec53d335")
+            .form-group.required
+              label.control-label(for="amt") Amount
+              input#amt.form-control(8="", type="text", name="amt", required="", value="")
+            .form-group.required
+              label.control-label(for="date") Date
+              input#date.form-control(type="date", name="date", required="", value="")
+            .form-group
+              label.control-label(for="description") Description
+              input#description.form-control(type="text", name="description", value="")
+            .form-group
+              label.control-label(for="comments") Comment
+              input#comments.form-control(type="text", name="comments", value="")
+            .form-group
+              label.control-label(for="category") Category
+              select#category.form-control(name="category")
+                option(value="HOH") House hold
+                option(value="RAT") Ration
+                option(value="VGF") Veggies &#38; fruits
+                option(value="CC") Child Care
+                option(value="MSC") Misc
+                option(value="MOB") Mobile
+                option(value="BCH") Bank Charges
+                option(value="INT") Internet
+                option(value="TV") Tv
+                option(value="RST") Restaurant
+                option(value="CLT") Clothing
+                option(value="TVL") Travel &#38; Outing
+                option(value="PTL") Petrol
+                option(value="MS") Maid &#38; Servant
+                option(value="CSR") Car Service &#38; Repair
+                option(value="MLK") Milk
+                option(value="PCA") Personal Care
+                option(value="OFF") Official
+                option(value="INC") Income
+            input#submit.btn.btn-default(type="submit", name="submit", value="Submit")
+        .col-xs-2.col-sm-0.col-md-4
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js")
+    script(src="javascripts/servercom.js")
+
+    

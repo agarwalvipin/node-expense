@@ -1,0 +1,48 @@
+doctype html
+html
+  head
+    title List of Expenses
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    // Bootstrap
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css", rel="stylesheet")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.min.css", rel="stylesheet")
+    script(type="text/javascript", src="https://www.google.com/jsapi")
+    script(type="text/javascript", src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.min.js')
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js")
+
+  body
+    nav.navbar.navbar-inverse
+      .container-fluid
+        .navbar-header
+          a.navbar-brand(href="#") Expenses
+        ul.nav.navbar-nav.navbar-right
+          li.active
+            a(href="#") Home
+          li
+            a(href="expense") Add
+          li
+            a(href="viewexpenses") View
+    .section
+      .container
+        .row
+          .col-md-8
+            #piechart
+          .col-md-4
+            #Details
+    .row.col-md-0
+    .row.col-md-12
+      h1 Expenses
+      table.table.table-responsive.table-bordered.table-hover.table-condensed.table-striped#entryTableData
+        tr
+          th ID
+          th Amount
+          th Date
+          th Description
+          th Category
+          th Timestamp
+          th Action
+        
+    .row.col-md-0
+    //script(type="text/javascript", src="javascripts/googexpensechart.js")
+    script(type="text/javascript", src="javascripts/servercom.js")
