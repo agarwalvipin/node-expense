@@ -17,11 +17,12 @@
     </nav>
     <div class="container">
       <div class="row">
-		<div class="col-xs-2 col-sm-0 col-md-4"></div>
-        <div class="col-xs-8 col-sm-4 col-md-4">
-          <form action="" method="post" role="form" class="form">
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <!--form.form(id = "eform" name ="eform" action="viewexpenses", method="post", role="form")-->
+          <div id="formSubmitResponseStatus"></div>
+          <form action="" onsubmit="return validate()" class="form">
             <div style="display: none;">
-              <input id="csrf_token" type="hidden" name="csrf_token" value="1453604401##0b8d2ae3f5c0acd49e6b28cb98995dd7ec53d335">
+              <!--input#csrf_token(type="hidden", name="csrf_token", value="1453604401##0b8d2ae3f5c0acd49e6b28cb98995dd7ec53d335")-->
             </div>
             <div class="form-group required">
               <label for="amt" class="control-label">Amount</label>
@@ -66,9 +67,9 @@
             <input id="submit" type="submit" name="submit" value="Submit" class="btn btn-default">
           </form>
         </div>
-		<div class="col-xs-2 col-sm-0 col-md-4"></div>
       </div>
     </div>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="javascripts/servercom.js"></script>
   </body>
 </html>

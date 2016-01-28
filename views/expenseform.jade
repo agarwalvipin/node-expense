@@ -17,8 +17,7 @@ html
             a(href="viewexpenses") View
     .container
       .row
-        .col-xs-2.col-sm-0.col-md-4
-        .col-xs-8.col-sm-4.col-md-4
+        .col-xs-12.col-sm-4.col-md-4
           //form.form(id = "eform" name ="eform" action="viewexpenses", method="post", role="form")
           div#formSubmitResponseStatus
           form.form(action="" onsubmit="return validate()")
@@ -59,7 +58,6 @@ html
                 option(value="OFF") Official
                 option(value="INC") Income
             input#submit.btn.btn-default(type="submit", name="submit", value="Submit")
-        .col-xs-2.col-sm-0.col-md-4
     script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js")
     script(src="javascripts/servercom.js")
 
